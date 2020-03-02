@@ -1,5 +1,9 @@
 package rocks.zipcode.assessment2.arrays;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
 /**
  * @author leon on 28/11/2018.
  */
@@ -11,7 +15,20 @@ public class StringArrayUtils {
      * @return an array with all elements between `startingIndex` and `endingIndex`
      */
     public static String[] getSubArray(String[] arrayToBeSpliced, int startingIndex, int endingIndex) {
-        return null;
+        List<String> a = new ArrayList<String>();
+        Collections.addAll(a,arrayToBeSpliced);
+        List<String> b;
+        try {
+            b = a.subList(startingIndex, endingIndex);
+
+        }catch(Exception e){
+            if(startingIndex>arrayToBeSpliced.length-1 || endingIndex>arrayToBeSpliced.length-1){
+                throw new ArrayIndexOutOfBoundsException();
+            }else{
+                throw new IllegalArgumentException();
+            }
+        }
+        return b.toArray(new String[0]);
     }
 
 
@@ -21,6 +38,10 @@ public class StringArrayUtils {
      * @return an array all elements between after `startingIndex`
      */
     public static String[] getEndingArray(String[] arrayToBeSpliced, int startingIndex) {
-        return null;
+        List<String> a = new ArrayList<String>();
+        Collections.addAll(a,arrayToBeSpliced);
+
+        List<String> b  = a.subList(startingIndex, arrayToBeSpliced.length);
+        return b.toArray(new String[0]);
     }
 }
