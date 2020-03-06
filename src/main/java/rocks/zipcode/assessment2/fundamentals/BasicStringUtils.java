@@ -35,12 +35,11 @@ public class BasicStringUtils {
      * @return `string` with `charactersToRemove` removed
      */
     public static String removeCharacters(String string, String charactersToRemove) {
-        char[] chars = string.toCharArray();
         char[] charsToRemove = charactersToRemove.toCharArray();
         String result = string;
 
         for (int i = 0; i < charactersToRemove.length(); i++) {
-            for(char c :chars){
+            for(char c :result.toCharArray()){
                 if(c == charsToRemove[i]){
                     result = result.replace(c+"","");
                 }

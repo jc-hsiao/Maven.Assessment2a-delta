@@ -19,7 +19,7 @@ public class Shelter<Ageable> implements Iterable<Ageable>{
     List<Ageable> memebers;
 
     public Shelter() {
-        memebers = new ArrayList<Ageable>();
+        memebers = new ArrayList<>();
     }
 
     /**

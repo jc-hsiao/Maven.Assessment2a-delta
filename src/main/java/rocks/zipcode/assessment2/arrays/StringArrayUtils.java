@@ -15,7 +15,7 @@ public class StringArrayUtils {
      * @return an array with all elements between `startingIndex` and `endingIndex`
      */
     public static String[] getSubArray(String[] arrayToBeSpliced, int startingIndex, int endingIndex) {
-        List<String> a = new ArrayList<String>();
+        List<String> a = new ArrayList<>();
         Collections.addAll(a,arrayToBeSpliced);
         List<String> b;
         try {
@@ -38,7 +38,7 @@ public class StringArrayUtils {
      * @return an array all elements between after `startingIndex`
      */
     public static String[] getEndingArray(String[] arrayToBeSpliced, int startingIndex) {
-        List<String> a = new ArrayList<String>();
+        List<String> a = new ArrayList<>();
         Collections.addAll(a,arrayToBeSpliced);
 
         List<String> b  = a.subList(startingIndex, arrayToBeSpliced.length);

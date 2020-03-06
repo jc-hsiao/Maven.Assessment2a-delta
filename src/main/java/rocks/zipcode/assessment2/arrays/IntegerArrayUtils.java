@@ -15,7 +15,7 @@ public class IntegerArrayUtils {
      */
     public static Integer[] add(Integer[] integerArray, Integer valueToBeAdded) {
 
-        List<Integer> a = new ArrayList<Integer>();
+        List<Integer> a = new ArrayList<>();
         Collections.addAll(a,integerArray);
         a.add(valueToBeAdded);
         return a.toArray(new Integer[0]);
@@ -28,7 +28,7 @@ public class IntegerArrayUtils {
      * @return `integerArray` with `valueToBeInserted` at index number `indexToInsertAt`
      */
     public static Integer[] replace(Integer[] integerArray, int indexToInsertAt, Integer valueToBeInserted) {
-        List<Integer> a = new ArrayList<Integer>();
+        List<Integer> a = new ArrayList<>();
         Collections.addAll(a,integerArray);
         a.set(indexToInsertAt,valueToBeInserted);
         return a.toArray(new Integer[0]);
@@ -40,7 +40,7 @@ public class IntegerArrayUtils {
      * @return element located at `indexToFetch`
      */
     public static Integer get(Integer[] integerArray, Integer indexToFetch) {
-        List<Integer> a = new ArrayList<Integer>();
+        List<Integer> a = new ArrayList<>();
         Collections.addAll(a,integerArray);
         return a.get(indexToFetch);
     }

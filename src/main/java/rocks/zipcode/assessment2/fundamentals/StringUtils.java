@@ -41,7 +41,7 @@ public class StringUtils {
      */
     public static Boolean isAlphaString(String string) {
         String newString = string.replace(" ","");
-        return (newString != null) && newString.chars().allMatch(Character::isLetter);
+        return  newString.chars().allMatch(Character::isLetter);
     }
 
     /**
